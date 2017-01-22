@@ -6,10 +6,15 @@
 
 *
 This file uses the following analytic dataset to address several research
-questions regarding free/reduced-price meals at CA public K-12 schools
+questions regarding 500-yard freestyle swim times for male and female swimmers 
+age 50-94 in a biennial national competition in 2009, 2011 and 2013. The 
+research tries to find out if some improvements over the years for the swim 
+completions, and have some insight if the further funding or investment for the 
+swim clubs.
 
-Dataset Name: FRPM1516_analytic_file created in external file
-STAT6250-01_w17-team-0_project1_data_preparation.sas, which is assumed to be
+
+Dataset Name: SST091113_analytic_file created in external file
+STAT6250-01_w17-team-8_project1_data_preparation.sas, which is assumed to be
 in the same directory as this file
 
 See included file for dataset properties
