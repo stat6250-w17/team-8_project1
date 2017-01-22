@@ -8,7 +8,7 @@ Number of Features: 21
 Data Source: The file http:// .txt was
 downloaded & edited to produce file sst091113-edited.xls by 
 Data Dictionary: http://  or worksheet
-"Data Field Descriptions" in file sst091113-edited.xls
+"Data Field Descriptions" in file sst091113_edited.xls
 Unique ID: Obs
 ;
 
@@ -21,7 +21,7 @@ http://filebin.ca/39cGB7L4N9rr/sst091113-edited.xls
 age frequency
 ;
 
-proc freq data=SST091113_raw;
+proc freq data=sst091113_edited;
    tables Age;
 run;
 
@@ -31,7 +31,7 @@ gender ratio?
 ;
 
 
-    proc freq data=SST091113_raw;
+    proc freq data=sst091113_edited;
    tables Gender;   
     
 run;
@@ -41,9 +41,9 @@ gender for 2009
 ;
 
 option firstobs=2 obs=200;
-proc print data=SST091113_raw;
+proc print data=sst091113_edited;
 run;
-proc freq data=SST091113_raw;
+proc freq data=sst091113_edited;
 table Gender;
 run;
 
@@ -52,6 +52,6 @@ run;
 Min and Max of Splits times
 ;
 
-proc means data=SST091113_raw min max maxdec=0;
+proc means data=sst091113_edited min max maxdec=0;
    var Split_1 Split_2 Split_3 Split_4 Split_5 Split_6 Split_7 Split_8 Split_9 Split_10;
 run;
