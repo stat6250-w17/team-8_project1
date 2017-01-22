@@ -58,13 +58,17 @@ Unique ID: Obs
 http://filebin.ca/39cGB7L4N9rr/sst091113-edited.xls
 ;
 
+*
 Question: what is the average age of the group who attendence in these three years?
+;
 
 proc freq data=SST091113_raw;
    tables Age;
 run;
 
+*
 I used above coding to calculating the weight of each age and then calculation the average age.
+;
 
 
 
@@ -81,7 +85,9 @@ proc format;
     
 run;
 
+*
 question:compare the gender ratio of swimmers for 2009 and overall three years?
+;
 
 First I need to code the gender ratio for all three years as:
 
@@ -98,7 +104,9 @@ table Gender;
 run;
 
 
+*
 Question: Is there any difference between Splits in their Min and Max?
+;
 
 proc means data=SST091113_raw min max maxdec=0;
    var Split_1 Split_2 Split_3 Split_4 Split_5 Split_6 Split_7 Split_8 Split_9 Split_10;
