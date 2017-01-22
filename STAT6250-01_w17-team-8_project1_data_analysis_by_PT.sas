@@ -63,21 +63,20 @@ http://filebin.ca/39cGB7L4N9rr/sst091113-edited.xls
 
 *
 Question: what is the average age of the group who attendence in these three years?
+Rational:I used above coding to calculating the weight of each age and then calculation the average age.
+Methodology:Use proc freq to calculation the frequency of each year and from that I can calculate the average age
 ;
 
 proc freq data=SST091113_raw;
    tables Age;
 run;
 
+
+
+
 *
-I used above coding to calculating the weight of each age and then calculation the average age.
+I tried to devide age and making new question but it does not work
 ;
-
-
-
-proc freq data=SST091113_raw;
-   tables item4-item6;
-run;
 
 proc format;
    value Age   low-64='< 65'
@@ -90,9 +89,11 @@ run;
 
 *
 question:compare the gender ratio of swimmers for 2009 and overall three years?
+Rational:I wan to see if this report has a bias to one gender or not and also I want to see if at the first year we had
+more women compare to the average of three years.
+Methodology:Use proc freq. to have a percentage for all three years and also for 2009 I used the option firstobs to separate
+2009
 ;
-
-First I need to code the gender ratio for all three years as:
 
     proc freq data=SST091113_raw;
    tables Gender;   
@@ -109,6 +110,8 @@ run;
 
 *
 Question: Is there any difference between Splits in their Min and Max?
+Rational:I wanted to see if the time changing from first slipt to the last one and if the time increasing as they get tired.
+Methodology: Use proc mean to calculating the min and max. time for each split and compare them together
 ;
 
 proc means data=SST091113_raw min max maxdec=0;
