@@ -1,12 +1,36 @@
 
+This file prepares the dataset described below for analysis.
 
-*Question: what is the average age of the group who attendence in these three years?
+Dataset Name: Senior Swimm Times
+
+Experimental Units: Three years (2009, 2011, 2013), cross-sectional (565 
+individuals) swimming time.
+
+Number of Observations: 565
+
+Number of Features: 21
+
+Data Source: The file http:// .txt was
+downloaded & edited to produce file sst091113-edited.xls by 
+
+Data Dictionary: http://  or worksheet
+"Data Field Descriptions" in file sst091113-edited.xls
+
+Unique ID: Obs
+;
+
+* setup environmental parameters;
+%let inputDatasetURL =
+http://filebin.ca/39cGB7L4N9rr/sst091113-edited.xls
+;
+
+Question: what is the average age of the group who attendence in these three years?
 
 proc freq data=SST091113_raw;
    tables Age;
 run;
 
-*I used above coding to calculating the weight of each age and then calculation the average age.
+I used above coding to calculating the weight of each age and then calculation the average age.
 
 
 
@@ -23,16 +47,16 @@ proc format;
     
 run;
 
-*question:compare the gender ratio of swimmers for 2009 and overall three years?
+question:compare the gender ratio of swimmers for 2009 and overall three years?
 
-*First I need to code the gender ratio for all three years as:
+First I need to code the gender ratio for all three years as:
 
     proc freq data=SST091113_raw;
    tables Gender;   
     
 run;
 
-*Now its time to code the gender ratio for 2009 as:
+Now its time to code the gender ratio for 2009 as:
 
     proc freq data=SST091113_raw(obs199);
    tables Gender;   
