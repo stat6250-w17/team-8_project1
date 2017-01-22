@@ -6,7 +6,8 @@
 This file uses the following analytic dataset to address several research
 questions regarding Swimming time for seniors
 
-Dataset Name:Senior Swimm Times, STAT6250-01_w17-tehttps://github.com/stat6250/team-8_project1am-8_project1_data_preparation.sas
+Dataset Name:Senior Swimm Times, STAT6250-01_w17-team-8_project1_data_preparation,
+https://github.com/stat6250/team-8_project1/blob/master/STAT6250-01_w17-team-8_project1_data_preparation.sas
 , which is assumed to be in the same directory as this file
 
 See included file for dataset properties
@@ -51,7 +52,7 @@ Number of Features: 21
 Data Source: The file http:// .txt was
 downloaded & edited to produce file sst091113_edited.xls by 
 
-Data Dictionary: http://  or worksheet
+Data Dictionary: https://github.com/stat6250/team-8_project1/blob/master/sst091113_edited.xls  or worksheet
 "Data Field Descriptions" in file sst091113_edited.xls
 
 Unique ID: Obs
