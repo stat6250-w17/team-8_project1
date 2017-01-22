@@ -4,5 +4,5 @@ Team Nickname: swim-Runner
 
 Team Members:
 Fu, Biao;
-Tabatabaei Tabrizi,
+Tabatabaei Tabrizi;
 Wanigasundara, Imali;
