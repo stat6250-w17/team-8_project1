@@ -5,8 +5,8 @@ Experimental Units: Three years (2009, 2011, 2013), cross-sectional (565
 individuals) swimming time.
 Number of Observations: 565
 Number of Features: 21
-Data Source: The file http:// .txt was
-downloaded & edited to produce file sst091113-edited.xls by 
+Data Source: The file https://github.com/stat6250/team-8_project1/blob/master/sst091113_edited.xls was
+downloaded & edited to produce file sst091113_edited.xls by 
 Data Dictionary: http://  or worksheet
 "Data Field Descriptions" in file sst091113_edited.xls
 Unique ID: Obs
