@@ -56,18 +56,23 @@ First I need to code the gender ratio for all three years as:
     
 run;
 
-Now its time to code the gender ratio for 2009 as:
-
-    proc freq data=SST091113_raw(obs199);
-   tables Gender;   
-    
+option firstobs=2 obs=200;
+proc print data=SST091113_raw;
+run;
+proc freq data=SST091113_raw;
+table Gender;
 run;
 
-*Question: Is there any difference between Splits in their Min and Max?
+
+Question: Is there any difference between Splits in their Min and Max?
 
 proc means data=SST091113_raw min max maxdec=0;
    var Split_1 Split_2 Split_3 Split_4 Split_5 Split_6 Split_7 Split_8 Split_9 Split_10;
 run;
+
+
+
+
 
 
 
