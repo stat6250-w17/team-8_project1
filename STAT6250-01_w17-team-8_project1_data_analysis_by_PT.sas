@@ -1,3 +1,4 @@
+
 *******************************************************************************;
 **************** 80-character banner for column width reference ***************;
 * (set window width to banner width to calibrate line length to 80 characters *;
@@ -5,9 +6,13 @@
 
 *
 This file uses the following analytic dataset to address several research
-questions regarding free/reduced-price meals at CA public K-12 schools
-Dataset Name: FRPM1516_analytic_file created in external file
-STAT6250-01_w17-team-0_project1_data_preparation.sas, which is assumed to be
+questions regarding 500-yard freestyle swim times for male and female swimmers 
+age 50-94 in a biennial national competition in 2009, 2011 and 2013. The 
+research tries to find out if some improvements over the years for the swim 
+completions, and have some insight if the further funding or investment for the 
+swim clubs.
+Dataset Name: SST091113_analytic_file created in external file
+STAT6250-01_w17-team-8_project1_data_preparation.sas, which is assumed to be
 in the same directory as this file
 See included file for dataset properties
 ;
@@ -33,6 +38,7 @@ relative file import path to the current directory, if using Windows;
 	%end;
 %mend;
 %setup
+
 
 *
 Question: what is the average age of the group who attendence in these three years?
