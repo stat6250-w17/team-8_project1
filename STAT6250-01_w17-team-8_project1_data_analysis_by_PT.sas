@@ -37,33 +37,6 @@ relative file import path to the current directory, if using Windows;
 
 
 *
-preparing for prepration file as below
-This file prepares the dataset described below for analysis.
-
-Dataset Name: Senior Swimm Times
-
-Experimental Units: Three years (2009, 2011, 2013), cross-sectional (565 
-individuals) swimming time.
-
-Number of Observations: 565
-
-Number of Features: 21
-
-Data Source: The file http:// .txt was
-downloaded & edited to produce file sst091113_edited.xls by 
-
-Data Dictionary: https://github.com/stat6250/team-8_project1/blob/master/sst091113_edited.xls  or worksheet
-"Data Field Descriptions" in file sst091113_edited.xls
-
-Unique ID: Obs
-;
-
-* setup environmental parameters;
-%let inputDatasetURL =
-http://filebin.ca/39cGB7L4N9rr/sst091113_edited.xls
-;
-
-*
 Question: what is the average age of the group who attendence in these three years?
 Rational:I used above coding to calculating the weight of each age and then calculation the average age.
 Methodology:Use proc freq to calculation the frequency of each year and from that I can calculate the average age
