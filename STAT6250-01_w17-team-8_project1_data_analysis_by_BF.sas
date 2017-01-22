@@ -43,7 +43,8 @@ Research Question: What are the top twenty districts with the highest mean
 values of "Time"?
 
 Rationale: This should help find the state with the slowest swim times in 
-year 2009, 2011 and 2013.
+year 2009, 2011 and 2013 so the swim clubs might have better plans for 
+improving the swim times for certain states with slower swim times.
 
 Methodology: Use PROC MEANS to compute the mean of Time for State and Year, 
 and output the results to a temportatry dataset. Use PROC SORT extract and 
@@ -67,7 +68,7 @@ run;
 
 
 *
-Research Question: How does the distribution of "Time" for charter schools
+Research Question: How does the distribution of "Time" for swimmers
 comparing in 2009, 2011 and 2013?
 
 Rationale: This would help inform whether the improvement of the swim time
@@ -82,10 +83,10 @@ run;
 
 
 *
-Research Question: What is the swimmers in each state?
+Research Question: How many the swimmers are in each state?
 
-Rationale: This would help determine which state have larger groups of 
-swimmers.
+Rationale: This would help determine which states have larger groups of 
+swimmers so the swim clubs might have a better funding for future.
 
 Methodology: Use proc freq to create a frequency talbe for swimmers in 
 each state;
