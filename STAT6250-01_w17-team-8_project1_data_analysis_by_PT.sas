@@ -52,7 +52,7 @@ Data Source: The file http:// .txt was
 downloaded & edited to produce file sst091113-edited.xls by 
 
 Data Dictionary: http://  or worksheet
-"Data Field Descriptions" in file sst091113-edited.xls
+"Data Field Descriptions" in file sst091113_edited.xls
 
 Unique ID: Obs
 ;
@@ -68,7 +68,7 @@ Rational:I used above coding to calculating the weight of each age and then calc
 Methodology:Use proc freq to calculation the frequency of each year and from that I can calculate the average age
 ;
 
-proc freq data=SST091113_raw;
+proc freq data=sst091113_edited;
    tables Age;
 run;
 
@@ -96,15 +96,15 @@ Methodology:Use proc freq. to have a percentage for all three years and also for
 2009
 ;
 
-    proc freq data=SST091113_raw;
+    proc freq data=sst091113_edited;
    tables Gender;   
     
 run;
 
 option firstobs=2 obs=200;
-proc print data=SST091113_raw;
+proc print data=sst091113_edited;
 run;
-proc freq data=SST091113_raw;
+proc freq data=sst091113_edited;
 table Gender;
 run;
 
@@ -115,7 +115,7 @@ Rational:I wanted to see if the time changing from first slipt to the last one a
 Methodology: Use proc mean to calculating the min and max. time for each split and compare them together
 ;
 
-proc means data=SST091113_raw min max maxdec=0;
+proc means data=sst091113_edited min max maxdec=0;
    var Split_1 Split_2 Split_3 Split_4 Split_5 Split_6 Split_7 Split_8 Split_9 Split_10;
 run;
 
