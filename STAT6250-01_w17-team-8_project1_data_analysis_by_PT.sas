@@ -6,7 +6,7 @@
 This file uses the following analytic dataset to address several research
 questions regarding Swimming time for seniors
 
-Dataset Name:Senior Swimm Times, STAT6250-01_w17-team-8_project1_data_preparation.sas
+Dataset Name:Senior Swimm Times, STAT6250-01_w17-tehttps://github.com/stat6250/team-8_project1am-8_project1_data_preparation.sas
 , which is assumed to be in the same directory as this file
 
 See included file for dataset properties
@@ -36,6 +36,7 @@ relative file import path to the current directory, if using Windows;
 
 
 *
+preparing for prepration file as below
 This file prepares the dataset described below for analysis.
 
 Dataset Name: Senior Swimm Times
