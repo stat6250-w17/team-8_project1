@@ -3,13 +3,12 @@
 * (set window width to banner width to calibrate line length to 80 characters *;
 *******************************************************************************;
 
+*
 This file uses the following analytic dataset to address several research
-questions regarding Swimming time for seniors
-
-Dataset Name:Senior Swimm Times, STAT6250-01_w17-team-8_project1_data_preparation,
-https://github.com/stat6250/team-8_project1/blob/master/STAT6250-01_w17-team-8_project1_data_preparation.sas
-, which is assumed to be in the same directory as this file
-
+questions regarding free/reduced-price meals at CA public K-12 schools
+Dataset Name: FRPM1516_analytic_file created in external file
+STAT6250-01_w17-team-0_project1_data_preparation.sas, which is assumed to be
+in the same directory as this file
 See included file for dataset properties
 ;
 
@@ -34,7 +33,6 @@ relative file import path to the current directory, if using Windows;
 	%end;
 %mend;
 %setup
-
 
 *
 Question: what is the average age of the group who attendence in these three years?
