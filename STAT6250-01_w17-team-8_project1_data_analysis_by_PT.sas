@@ -51,8 +51,6 @@ proc freq data=sst091113_edited;
 run;
 
 
-
-
 *
 I tried to devide age and making new question but it does not work
 ;
