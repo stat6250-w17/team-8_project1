@@ -1,27 +1,116 @@
+******************************************************************************;
+**************** 80-character banner for column width reference ***************;
+* (set window width to banner width to calibrate line length to 80 characters *;
+*******************************************************************************;
 
+* 
 This file prepares the dataset described below for analysis.
+
 Dataset Name: Senior Swimm Times
+
 Experimental Units: Three years (2009, 2011, 2013), cross-sectional (565 
 individuals) swimming time.
+
 Number of Observations: 565
+
 Number of Features: 21
-Data Source: The file https://github.com/stat6250/team-8_project1/blob/master/sst091113_edited.xls was
-downloaded & edited to produce file sst091113_edited.xls by 
-Data Dictionary: http://  or worksheet
-"Data Field Descriptions" in file sst091113_edited.xls
+
+Data Source: The file 
+http://ww2.amstat.org/publications/jse/v22n1/doane/SeniorSwimTimes-DataSet.txt
+was downloaded & edited to produce file sst091113_edited.xls by replacing the
+missing value with blank cell, reformatting column variable according SAS 
+variable naming rules, for example, changing Split-1 to Split_1, etc.
+
+Data Dictionary: 
+http://ww2.amstat.org/publications/jse/v22n1/doane/SeniorSwimTimes-Documentation.doc
+or worksheet "Data Field Descriptions" in file sst091113_edited.xls
+
 Unique ID: Obs
 ;
 
 * setup environmental parameters;
 %let inputDatasetURL =
-http://filebin.ca/39cGB7L4N9rr/sst091113-edited.xls
+http://filebin.ca/39intHCKjBzE/sst091113_edited.xls
 ;
+
+
+
+* load raw senior swim times dataset over the wire;
+filename SSTtemp TEMP;
+proc http
+    method="get" 
+    url="&inputDatasetURL." 
+    out=SSTtemp
+    ;
+run;
+proc import
+    file=SSTtemp
+    out=SST091113_raw
+    dbms=xls
+    ;
+run;
+filename SSTtemp clear;
+
+* check raw SST dataset for duplicates with respect to its unique key;
+proc sort nodupkey data=SST091113_raw dupout=SST091113_raw_dups out=_null_;
+    by Obs;
+run;
+
+
+* build analytic dataset from senior swim times dataset with the least number of
+columns and minimal cleaning/transformation needed to address research questions
+in corresponding data-analysis files;
+data SST091113_analytic_file;
+    retain
+        Place
+	State
+        Gender
+        Age
+        Seed
+	Time
+	Year
+        Age
+        Split_1
+        Split_2
+        Split_3
+        Split_4
+        Split_5
+        Split_6
+        Split_7
+        Split_8
+        Split_9
+        Split_10
+    ;
+    keep
+        Place
+	State
+        Gender
+	Age
+        Seed
+        Time
+	Year
+        Age
+        Split_1
+        Split_2
+        Split_3
+        Split_4
+        Split_5
+        Split_6
+        Split_7
+        Split_8
+        Split_9
+        Split_10
+    ;
+    set SST091113_raw;
+run;
+
+
 
 *
 age frequency
 ;
 
-proc freq data=sst091113_edited;
+proc freq data=SST091113_raw;
    tables Age;
 run;
 
@@ -31,7 +120,7 @@ gender ratio?
 ;
 
 
-    proc freq data=sst091113_edited;
+    proc freq data=SST091113_raw;
    tables Gender;   
     
 run;
@@ -41,9 +130,9 @@ gender for 2009
 ;
 
 option firstobs=2 obs=200;
-proc print data=sst091113_edited;
+proc print data=SST091113_raw;
 run;
-proc freq data=sst091113_edited;
+proc freq data=SST091113_raw;
 table Gender;
 run;
 
@@ -52,6 +141,6 @@ run;
 Min and Max of Splits times
 ;
 
-proc means data=sst091113_edited min max maxdec=0;
+proc means data=SST091113_raw min max maxdec=0;
    var Split_1 Split_2 Split_3 Split_4 Split_5 Split_6 Split_7 Split_8 Split_9 Split_10;
 run;
