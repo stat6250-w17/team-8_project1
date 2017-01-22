@@ -49,7 +49,7 @@ Number of Observations: 565
 Number of Features: 21
 
 Data Source: The file http:// .txt was
-downloaded & edited to produce file sst091113-edited.xls by 
+downloaded & edited to produce file sst091113_edited.xls by 
 
 Data Dictionary: http://  or worksheet
 "Data Field Descriptions" in file sst091113_edited.xls
@@ -59,7 +59,7 @@ Unique ID: Obs
 
 * setup environmental parameters;
 %let inputDatasetURL =
-http://filebin.ca/39cGB7L4N9rr/sst091113-edited.xls
+http://filebin.ca/39cGB7L4N9rr/sst091113_edited.xls
 ;
 
 *
