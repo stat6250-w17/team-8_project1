@@ -55,14 +55,7 @@ run;
 I tried to devide age and making new question but it does not work
 ;
 
-proc format;
-   value Age   low-64='< 65'
-               65-80='65-80'
-               81-high='> 80';
-               
-    value seed   low-450='< 450';
-    
-run;
+
 
 *
 question:compare the gender ratio of swimmers for 2009 and overall three years?
