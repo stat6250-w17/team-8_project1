@@ -33,6 +33,14 @@ Unique ID: Obs
 http://filebin.ca/39intHCKjBzE/sst091113_edited.xls
 ;
 
+proc format;
+   value Age   low-64='< 65'
+               65-80='65-80'
+               81-high='> 80';
+               
+    value seed   low-450='< 450';
+    
+run;
 
 
 * load raw senior swim times dataset over the wire;
