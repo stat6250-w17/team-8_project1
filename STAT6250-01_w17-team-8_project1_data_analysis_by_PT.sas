@@ -52,8 +52,9 @@ run;
 
 
 *
-I tried to devide age and making new question but it does not work
-;
+Title1
+Footnote:by this step I can see the frequency of each year and this may help me to see the distribution of ages. 
+Fotnote2: however this is for three years I may need to calculate it for each year also to see if the average increased?
 
 
 
@@ -77,6 +78,12 @@ proc freq data=sst091113_edited;
 table Gender;
 run;
 
+* 
+title 2
+Footnot1: This step showing the ratio of gender in 2009 and compare it in total three years
+Fotnote2: if one gander has a significat differant so the result has bias and we can not valiate it for miniority gender
+*
+
 
 *
 Question: Is there any difference between Splits in their Min and Max?
@@ -87,6 +94,12 @@ Methodology: Use proc mean to calculating the min and max. time for each split a
 proc means data=sst091113_edited min max maxdec=0;
    var Split_1 Split_2 Split_3 Split_4 Split_5 Split_6 Split_7 Split_8 Split_9 Split_10;
 run;
+
+*
+Tite3
+Footnote1:In this step I can see the Min. and Max. of each split to see if it is increasing by time or if they kept they energy for last split
+Footnote2: this will clarify the hardest split for competitors
+*
 
 
 
