@@ -54,7 +54,7 @@ title2
 swim clubs might have better plans for improving the swim times for certain 
 states with slower swim times."
 ;
-footnote
+footnote1
 "Based on the above output, we can find the state of Nevada has the longest 
 swim time, where the state of West Virginia has the shortest swim time."
 ;
