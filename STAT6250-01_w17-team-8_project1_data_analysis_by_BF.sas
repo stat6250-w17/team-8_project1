@@ -32,7 +32,8 @@ relative file import path to the current directory, if using Windows;
 	&SYSSCP. = WIN
 %then
 	%do;
-		X "cd ""%substr(%sysget(SAS_EXECFILEPATH),1,%eval(%length(%sysget(SAS_EXECFILEPATH))-%length(%sysget(SAS_EXECFILENAME))))""";			
+		X "cd ""%substr(%sysget(SAS_EXECFILEPATH),1,%eval(%length(%sysget(SAS_EXECFILEPATH))-%length(%sysget(SAS_EXECFILENAME))))"""
+		;			
 		%include ".\&dataPrepFileName.";
 	%end;
 %else
@@ -43,59 +44,134 @@ relative file import path to the current directory, if using Windows;
 %setup
 
 
-*
-Research Question: What are the top twenty districts with the highest mean
-values of "Time"?
 
-Rationale: This should help find the state with the slowest swim times in 
-year 2009, 2011 and 2013 so the swim clubs might have better plans for 
-improving the swim times for certain states with slower swim times.
-
-Methodology: Use PROC MEANS to compute the mean of Time for State and Year, 
-and output the results to a temportatry dataset. Use PROC SORT extract and 
-sort just the means the temporary dateset, and use PROC PRINT to print just 
-the first twenty observations from the temporary dataset;
+title1
+"Research Question: What are mean values for the variable of Time for the state 
+in the descending order?"
 ;
-proc means mean noprint data=SST091113_analytic_file;
-    class State Year ;
+title2
+"Rationale: This should help find the state with the slowest swim times so the 
+swim clubs might have better plans for improving the swim times for certain 
+states with slower swim times."
+;
+footnote1
+"Based on the above output, we can find the state of Nevada has the longest 
+swim time, where the state of West Virginia has the shortest swim time."
+;
+footnote2
+"Moreover, by using the _FREQ_ in the id statement for the temp sorted data 
+file,  we can discover that the first seven states with the longest swim times 
+have fewer swimmers for the competition."
+;
+footnote3
+"Further analysis to look for geographic patterns is associated with the swim 
+times, given the states with higher mean swim times, for example, the state of 
+Nevada is in desert so the state might be short for water resources, building 
+the swim pools would become expensive and having less swim pools for the senior 
+to practice swim thereafter."
+; 
+
+*
+Methodology: Use PROC MEANS to compute the mean of Time for State, and output
+the results to a temportatry dataset. Use PROC SORT extract and sort just the
+means the temporary dateset, and use PROC PRINT to print just the first thirty 
+observations from the temporary dataset;
+;
+  
+proc means 
+        mean 
+        noprint
+        data=SST091113_analytic_file
+    ;
+    class State ;
     var Time;
+    where length(State) = 2;
     output out=SST091113_analytic_file_temp;
 run;
 
-proc sort data=SST091113_analytic_file_temp(where=(_STAT_="MEAN"));
+proc sort 
+        data=SST091113_analytic_file_temp(where=(_STAT_="MEAN"))
+    ;
     by descending Time;
 run;
-
-proc print noobs data=SST091113_analytic_file_temp(obs=20);
-    id State Year;
+    
+proc print 
+        data=SST091113_analytic_file_temp
+    ;
+    id State _FREQ_ ;
     var Time;
+    where State is not Null ;
 run;
 
+title;
+footnote;
 
+title1
+"Research Question: How does the distribution of Time for swimmers 
+comparing in 2009, 2011 and 2013?"
+;
+title2
+"Rationale: This would help inform whether there is the improvement of the 
+swim time over the years."
+;
+footnote1
+"Based on the above output, we can find that the distribution of swim time 
+was improved in 2013."
+;
+footnote2
+"However the swim time in 2011 was the slowest overall, one of the reasons was  
+the maximum swim time in 2011 is much longer than in 2009 and 2013, the data 
+distribution had a higher skewed profile in 2009."
+;
+footnote3
+"In addition, more analysis is needed for research of the correlation between 
+swim time and economics situation in the country between the years of 2009 and 
+2011. For example, if the US house and stock market crashed in 2007~2009 were 
+related to the swim time."
+; 
+ 
 *
-Research Question: How does the distribution of "Time" for swimmers
-comparing in 2009, 2011 and 2013?
+Methodolody: Compute five-number summaries and mean by Time variable;
 
-Rationale: This would help inform whether the improvement of the swim time
-over the years.
-
-Methodolody: Compute five-number summaries by Time variable;
-
-proc means min q1 median q3 max data=SST091113_analytic_file;
+proc means 
+        min q1 median q3 max 
+        data=SST091113_analytic_file maxdec=3
+    ;
     class Year;
     var Time;
+    where length(State) = 2;
 run;
 
+title;
+footnote;
+
+title1
+"Research Question: How many the swimmers are in each state?"
+;
+title2
+"Rationale: This would help determine which states have larger groups of 
+swimmers so the swim clubs might have a better funding for future."
+;
+footnote1
+"Based on the above output, the states of CA, TX and OH have the largest 
+groups of swimmers in total three competition years."
+;
+footnote2
+"Though the state of CA has the largest groups of swimmers in the 
+competition during the years, the swimmers from CA were dropped 
+significantly in 2013, further analysis is needed to determine if some 
+improvements for the swimmers and swim club for the state of CA."
+;
 
 *
-Research Question: How many the swimmers are in each state?
+Methodology: Use proc freq to create a frequency table for swimmers in 
+each state for three competition years;
 
-Rationale: This would help determine which states have larger groups of 
-swimmers so the swim clubs might have a better funding for future.
-
-Methodology: Use proc freq to create a frequency talbe for swimmers in 
-each state;
-
-proc freq data=SST091113_analytic_file;
-    table State;
+proc freq data=SST091113_analytic_file order=freq;
+    table State*Year 
+    /norow nocol nopercent;
+    where length(State) = 2;
 run;
+
+title;
+footnote;
