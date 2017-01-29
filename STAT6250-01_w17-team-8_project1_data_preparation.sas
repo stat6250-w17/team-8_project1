@@ -1,4 +1,4 @@
-******************************************************************************;
+*******************************************************************************;
 **************** 80-character banner for column width reference ***************;
 * (set window width to banner width to calibrate line length to 80 characters *;
 *******************************************************************************;
@@ -42,7 +42,6 @@ proc format;
     
 run;
 
-
 * load raw senior swim times dataset over the wire;
 filename SSTtemp TEMP;
 proc http
@@ -60,8 +59,14 @@ run;
 filename SSTtemp clear;
 
 * check raw SST dataset for duplicates with respect to its unique key;
-proc sort nodupkey data=SST091113_raw dupout=SST091113_raw_dups out=_null_;
-    by Obs;
+proc sort 
+        nodupkey 
+        data=SST091113_raw 
+        dupout=SST091113_raw_dups 
+        out=_null_
+    ;
+    by Obs
+    ;
 run;
 
 
@@ -77,7 +82,6 @@ data SST091113_analytic_file;
         Seed
 	Time
 	Year
-        Age
         Split_1
         Split_2
         Split_3
@@ -97,7 +101,6 @@ data SST091113_analytic_file;
         Seed
         Time
 	Year
-        Age
         Split_1
         Split_2
         Split_3
@@ -111,5 +114,3 @@ data SST091113_analytic_file;
     ;
     set SST091113_raw;
 run;
-
-
