@@ -74,6 +74,10 @@ PROC MEANS
     	class AgeGrp;
     	var Time;
 run;
+title;
+footnote;
+
+
 
 title1
 "Research Question: What is the distribution of time in each gender group in each year?"
@@ -99,7 +103,8 @@ PROC MEANS
     	class Year Gender;
     	var Time;
 run;
-
+title;
+footnote;
 
 
 title1
@@ -130,3 +135,5 @@ PROC MEANS MEAN STD MAXDEC=0
 	VAR SPLIT_1 SPLIT_10;
 	WHERE PLACE <= 5;
 RUN;
+title;
+footnote;
