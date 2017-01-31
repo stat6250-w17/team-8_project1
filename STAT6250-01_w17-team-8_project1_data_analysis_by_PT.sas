@@ -72,7 +72,7 @@ title 1:Research question:compare the gender ratio of swimmers for 2009 and over
 Title 2:Rational:I wan to see if this report has a bias to one gender or not and also I want to see if at the first year 
 we had more women compare to the average of three years.
 ;
-Footnot1: This step showing the ratio of gender in 2009 and compare it in total three years
+Footnote1: This step showing the ratio of gender in 2009 and compare it in total three years
 ;
 Footnote2: if one gander has a significat differant so the result has bias and we can not valiate it for miniority gender
 ;
