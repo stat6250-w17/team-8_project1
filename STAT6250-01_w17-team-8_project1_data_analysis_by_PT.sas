@@ -42,17 +42,22 @@ relative file import path to the current directory, if using Windows;
 
 
 
-Title1 :research question: what is the average age of the competitor for all three years?
+Title1 
+"research question: what is the average age of the competitor for all three years?"
 ;
-Title 2:Rational:I used above coding to calculating the weight of each age to calculationing the average age.
+Title 2
+"Rational:I used above coding to calculating the weight of each age to calculationing the average age."
 ;
-Footnote:this step  can show the frequency of each year, this may help me to see the distribution of ages. 
+Footnote
+"this step  can show the frequency of each year, this may help me to see the distribution of ages." 
 ;
-Footnote2: however from this analysis I am calculating three years average I may need to calculate it for each 
-year also to see if the average increased?
+Footnote2
+"however from this analysis I am calculating three years average I may need to calculate it for each 
+year also to see if the average increased?"
 ;
-footnote3: future analysis can be compareing average of age for each year to see if the average increased?(as previous competiotor 
-attending for next competition?(in this case average should increase by 2))
+footnote3
+"future analysis can be compareing average of age for each year to see if the average increased?(as previous competiotor 
+attending for next competition?(in this case average should increase by 2))"
 ;
 *
 Methodology:Use proc freq to calculation the frequency of each year and from that I can calculate the average age
@@ -68,17 +73,22 @@ run;
 
 
  
-title 1:Research question:compare the gender ratio of swimmers in 2009 to overall three years?
+title 1
+"Research question:compare the gender ratio of swimmers in 2009 to overall three years?"
 ;
-Title 2:Rational:I wan to analysis the bias of this report one gender also I want to see if at the first year 
-we had more women compare to the average of three years.
+Title 2
+"Rational:I wan to analysis the bias of this report one gender also I want to see if at the first year 
+we had more women compare to the average of three years."
 ;
-Footnote1: This step showing the ratio of gender in 2009 and compare it in total three years
+Footnote1
+"This step showing the ratio of gender in 2009 and compare it in total three years."
 ;
-Footnote2: if one gander has a significat differant so the result has bias and we can not valiate it for miniority gender
+Footnote2
+"if one gander has a significat differant so the result has bias and we can not valiate it for miniority gender"
 ;
-footnote3: future analysis can be calculating the gender ratio foreach three years and see if the ratio changing and also
-using the age average from previous question to see if gender ratio changes by changing the average age?
+footnote3
+"future analysis can be calculating the gender ratio foreach three years and see if the ratio changing and also
+using the age average from previous question to see if gender ratio changes by changing the average age?"
 ;
 *
 Methodology:Use proc freq. to have a percentage for all three years and also for 2009 I used the option firstobs to separate
@@ -99,17 +109,23 @@ run;
 
 
 
-Title 1:Research question:Is there any difference between Splits in their Min and Max?
+Title 1
+"Research question:Is there any difference between Splits in their Min and Max?"
 ;
-Title 2:Rational:I wanted to see if the time changing from first slipt to the last one and if the time increasing as they 
-get tired or if they speed up to win the game?
+Title 2
+"Rational:I wanted to see if the time changing from first slipt to the last one and if the time increasing as they 
+get tired or if they speed up to win the game?"
 ;
-Footnote1:In this step I can see the Min. and Max. of each split to see if it is increasing by time or if they kept 
-they energy for last split
+Footnote1
+"In this step I can see the Min. and Max. of each split to see if it is increasing by time or if they kept 
+they energy for last split."
 ;
-Footnote2: this will clarify the hardest split for competitors
+Footnote2
+"this will clarify the hardest split for competitors"
 ;
-footnote3: future analysis can be comparing the shortest Split time of three years
+footnote3
+"future analysis can be comparing the shortest Split time of three years to see if has same incresing/decraesing of age 
+average"
 ;
 *
 
