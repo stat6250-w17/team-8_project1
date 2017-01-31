@@ -61,7 +61,6 @@ attending for next competition?(in this case average should increase by 2))"
 *
 Methodology:Use proc freq to calculation the frequency of each year and from that I can calculate the average age
 ;
-
 proc freq data=sst091113_edited;
    tables Age;
 run;
