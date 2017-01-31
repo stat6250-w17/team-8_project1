@@ -74,7 +74,7 @@ we had more women compare to the average of three years.
 ;
 Footnot1: This step showing the ratio of gender in 2009 and compare it in total three years
 ;
-Fotnote2: if one gander has a significat differant so the result has bias and we can not valiate it for miniority gender
+Footnote2: if one gander has a significat differant so the result has bias and we can not valiate it for miniority gender
 ;
 footnote3: future analysis can be calculating the gender ratio foreach three years and see if the ratio changing and also
 using the age average from previous question to see if gender ratio changes by changing the average age?
