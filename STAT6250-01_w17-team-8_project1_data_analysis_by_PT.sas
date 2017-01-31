@@ -41,7 +41,6 @@ relative file import path to the current directory, if using Windows;
 
 
 
-
 Title1 
 "research question: what is the average age of the competitor for all three years?"
 ;
@@ -66,13 +65,11 @@ Methodology:Use proc freq to calculation the frequency of each year and from tha
 proc freq data=sst091113_edited;
    tables Age;
 run;
+title;
+footnote;
 
 
 
-
-
-
- 
 title 1
 "Research question:compare the gender ratio of swimmers in 2009 to overall three years?"
 ;
@@ -94,11 +91,9 @@ using the age average from previous question to see if gender ratio changes by c
 Methodology:Use proc freq. to have a percentage for all three years and also for 2009 I used the option firstobs to separate
 2009
 ;
-
-    proc freq data=sst091113_edited;
-   tables Gender;   
-    
-run;
+ proc freq data=sst091113_edited;
+ tables Gender;   
+ run;
 
 option firstobs=2 obs=200;
 proc print data=sst091113_edited;
@@ -106,9 +101,8 @@ run;
 proc freq data=sst091113_edited;
 table Gender;
 run;
-
-
-
+title;
+footnote;
 
 
 
@@ -131,10 +125,8 @@ footnote3
 average"
 ;
 *
-
 Methodology: Use proc mean to calculating the min and max. time for each split and compare them together
 ;
-
 proc means data=sst091113_edited min max maxdec=0;
    var Split_1 Split_2 Split_3 Split_4 Split_5 Split_6 Split_7 Split_8 Split_9 Split_10;
 run;
