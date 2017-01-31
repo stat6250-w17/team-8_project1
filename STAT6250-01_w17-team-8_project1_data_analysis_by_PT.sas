@@ -42,13 +42,14 @@ relative file import path to the current directory, if using Windows;
 
 
 
-Title1 :research question: what is the average age of the group who attendence in these three years?
+Title1 :research question: what is the average age of the competitor for all three years?
 ;
-Title 2:Rational:I used above coding to calculating the weight of each age and then calculation the average age.
+Title 2:Rational:I used above coding to calculating the weight of each age to calculationing the average age.
 ;
-Footnote:by this step I can see the frequency of each year and this may help me to see the distribution of ages. 
+Footnote:this step  can show the frequency of each year, this may help me to see the distribution of ages. 
 ;
-Footnote2: however this is for three years I may need to calculate it for each year also to see if the average increased?
+Footnote2: however from this analysis I am calculating three years average I may need to calculate it for each 
+year also to see if the average increased?
 ;
 footnote3: future analysis can be compareing average of age for each year to see if the average increased?(as previous competiotor 
 attending for next competition?(in this case average should increase by 2))
@@ -67,9 +68,9 @@ run;
 
 
  
-title 1:Research question:compare the gender ratio of swimmers for 2009 and overall three years?
+title 1:Research question:compare the gender ratio of swimmers in 2009 to overall three years?
 ;
-Title 2:Rational:I wan to see if this report has a bias to one gender or not and also I want to see if at the first year 
+Title 2:Rational:I wan to analysis the bias of this report one gender also I want to see if at the first year 
 we had more women compare to the average of three years.
 ;
 Footnote1: This step showing the ratio of gender in 2009 and compare it in total three years
