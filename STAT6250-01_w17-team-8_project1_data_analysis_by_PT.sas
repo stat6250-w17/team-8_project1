@@ -122,7 +122,18 @@ Methodology: Use proc mean to calculating the min and max. time for
 each split and compare them together
 ;
 proc means data=sst091113_edited min max maxdec=0;
-var Split_1 Split_2 Split_3 Split_4 Split_5 Split_6 Split_7 Split_8 Split_9 Split_10;
+var 
+    Split_1 
+    Split_2 
+    Split_3 
+    Split_4 
+    Split_5 
+    Split_6 
+    Split_7 
+    Split_8 
+    Split_9 
+    Split_10
+;
 run;
 title;
 footnote;
