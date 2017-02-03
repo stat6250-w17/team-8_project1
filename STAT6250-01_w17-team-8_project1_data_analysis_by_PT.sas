@@ -41,16 +41,16 @@ relative file import path to the current directory, if using Windows;
 
 
 
-Title1 
+title1 
 "research question: what is the average age of the competitor for all three years?"
 ;
-Title2
+title2
 "Rational:I used above coding to calculating the weight of each age to calculationing the average age."
 ;
-Footnote
+footnote
 "this step  can show the frequency of each year, this may help me to see the distribution of ages." 
 ;
-Footnote2
+footnote2
 "however from this analysis I am calculating three years average I may need to calculate it for each 
 year also to see if the average increased?"
 ;
@@ -72,14 +72,14 @@ footnote;
 title1
 "Research question:compare the gender ratio of swimmers in 2009 to overall three years?"
 ;
-Title2
+title2
 "Rational:I wan to analysis the bias of this report one gender also I want to see if at the first year 
 we had more women compare to the average of three years."
 ;
-Footnote1
+footnote1
 "This step showing the ratio of gender in 2009 and compare it in total three years."
 ;
-Footnote2
+footnote2
 "if one gander has a significat differant so the result has bias and we can not valiate it for miniority gender"
 ;
 footnote3
@@ -105,18 +105,18 @@ footnote;
 
 
 
-Title1
+title1
 "Research question:Is there any difference between Splits in their Min and Max?"
 ;
-Title2
+title2
 "Rational:I wanted to see if the time changing from first slipt to the last one and if the time increasing as they 
 get tired or if they speed up to win the game?"
 ;
-Footnote1
+footnote1
 "In this step I can see the Min. and Max. of each split to see if it is increasing by time or if they kept 
 they energy for last split."
 ;
-Footnote2
+footnote2
 "this will clarify the hardest split for competitors"
 ;
 footnote3
