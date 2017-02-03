@@ -57,7 +57,8 @@ footnote3
 "future analysis can be compareing average of age for each year to see if the average increased?"
 ;
 *
-Methodology:Use proc freq to calculation the frequency of each year and from that I can calculate the average age
+Methodology:Use proc freq to calculation the frequency of each year and from
+that I can calculate the average age
 ;
 proc freq data=sst091113_edited;
    tables Age;
@@ -83,7 +84,8 @@ footnote3
 "future analysis can be calculating the gender ratio for each three years and see if gender ratio changes by changing the average age?"
 ;
 *
-Methodology:Use proc freq. to have a percentage for all three years and also for 2009 I used the option firstobs to separate 2009
+Methodology:Use proc freq. to have a percentage for all three years and 
+also for 2009 I used the option firstobs to separate 2009
 ;
  proc freq data=sst091113_edited;
  tables Gender;   
@@ -116,10 +118,11 @@ footnote3
 "future analysis can be comparing the shortest Split time of three years to see if has same incresing/decraesing of age average"
 ;
 *
-Methodology: Use proc mean to calculating the min and max. time for each split and compare them together
+Methodology: Use proc mean to calculating the min and max. time for
+each split and compare them together
 ;
 proc means data=sst091113_edited min max maxdec=0;
-   var Split_1 Split_2 Split_3 Split_4 Split_5 Split_6 Split_7 Split_8 Split_9 Split_10;
+var Split_1 Split_2 Split_3 Split_4 Split_5 Split_6 Split_7 Split_8 Split_9 Split_10;
 run;
 title;
 footnote;
