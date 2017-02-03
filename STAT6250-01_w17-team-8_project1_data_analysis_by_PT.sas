@@ -44,7 +44,7 @@ relative file import path to the current directory, if using Windows;
 Title1 
 "research question: what is the average age of the competitor for all three years?"
 ;
-Title 2
+Title2
 "Rational:I used above coding to calculating the weight of each age to calculationing the average age."
 ;
 Footnote
@@ -69,10 +69,10 @@ footnote;
 
 
 
-title 1
+title1
 "Research question:compare the gender ratio of swimmers in 2009 to overall three years?"
 ;
-Title 2
+Title2
 "Rational:I wan to analysis the bias of this report one gender also I want to see if at the first year 
 we had more women compare to the average of three years."
 ;
@@ -105,10 +105,10 @@ footnote;
 
 
 
-Title 1
+Title1
 "Research question:Is there any difference between Splits in their Min and Max?"
 ;
-Title 2
+Title2
 "Rational:I wanted to see if the time changing from first slipt to the last one and if the time increasing as they 
 get tired or if they speed up to win the game?"
 ;
