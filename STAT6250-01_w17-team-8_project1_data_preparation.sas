@@ -82,6 +82,7 @@ data SST091113_analytic_file;
 	State
         Gender
         Age
+        AgeGrp
         Seed
 	Time
 	Year
@@ -101,6 +102,7 @@ data SST091113_analytic_file;
 	State
         Gender
 	Age
+	AgeGrp
         Seed
         Time
 	Year
