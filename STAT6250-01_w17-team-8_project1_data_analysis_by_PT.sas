@@ -60,7 +60,7 @@ footnote3
 Methodology:Use proc freq to calculation the frequency of each year and from
 that I can calculate the average age
 ;
-proc freq data=sst091113_edited;
+proc freq data=SST091113_analytic_file;
    tables Age;
 run;
 title;
@@ -87,15 +87,15 @@ footnote3
 Methodology:Use proc freq. to have a percentage for all three years and 
 also for 2009 I used the option firstobs to separate 2009
 ;
- proc freq data=sst091113_edited;
- tables Gender;   
- run;
+proc freq data=SST091113_analytic_file;
+    tables Gender;   
+run;
 
 option firstobs=2 obs=200;
-proc print data=sst091113_edited;
+proc print data=SST091113_analytic_file;
 run;
-proc freq data=sst091113_edited;
-table Gender;
+proc freq data=SST091113_analytic_file;
+    table Gender;
 run;
 title;
 footnote;
@@ -121,7 +121,7 @@ footnote3
 Methodology: Use proc mean to calculating the min and max. time for
 each split and compare them together
 ;
-proc means data=sst091113_edited min max maxdec=0;
+proc means data=SST091113_analytic_file min max maxdec=0;
 var 
     Split_1 
     Split_2 
@@ -137,12 +137,4 @@ var
 run;
 title;
 footnote;
-
-
-
-
-
-
-
-
 
