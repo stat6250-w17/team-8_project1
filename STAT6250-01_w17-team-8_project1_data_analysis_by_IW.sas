@@ -68,9 +68,9 @@ higher time range comparative to other age groups"
 Methodology: PROC MEANS statement together with statistics to be computed;
 ;
 
-PROC MEANS 
-	MIN MAX P25 P75 MEDIAN RANGE MAXDEC=0
-	DATA=sst091113_edited;
+proc means 
+	min max p25 p75 median range maxdec=0
+	data=SST091113_analytic_file;
     	class AgeGrp;
     	var Time;
 run;
@@ -97,9 +97,9 @@ footnote3
 Methodology: PROC MEANS statement along with statistics and class statement for each year and gender categories.
 ;
 
-PROC MEANS 
-	 MIN MAX P25 P75 MEDIAN MAXDEC=0
-	 DATA=sst091113_edited;
+proc means 
+	 min max p25 p75 mediam maxdec=0
+	 data=SST091113_analytic_file;
     	class Year Gender;
     	var Time;
 run;
@@ -129,11 +129,11 @@ comparisons could be done on all contestants."
 Methodology: PROC MEANS and WHERE statement to limit the top places.
 ;
 
-PROC MEANS MEAN STD MAXDEC=0
-	DATA=sst091113_edited;
-	CLASS GENDER PLACE;
-	VAR SPLIT_1 SPLIT_10;
-	WHERE PLACE <= 5;
-RUN;
+proc means mean std maxdec=0
+	data=SST091113_analytic_file;
+	class Gender Place;
+	var Split_1 Split_10;
+	where Place <= 5;
+run;
 title;
 footnote;
