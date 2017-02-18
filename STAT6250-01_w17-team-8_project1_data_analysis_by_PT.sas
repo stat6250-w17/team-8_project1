@@ -42,7 +42,7 @@ relative file import path to the current directory, if using Windows;
 
 
 title1 
-"research question: what is the average age of the competitor for all three years?"
+"research question: what is the Frequency age of the competitor for all three years?"
 ;
 title2
 "Rational:I used above coding to calculating the weight of each age to calculationing the average age."
