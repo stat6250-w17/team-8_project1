@@ -29,25 +29,24 @@ using a system path dependent on the host operating system, after setting the
 relative file import path to the current directory, if using Windows;
 %macro setup;
 %if
-	&SYSSCP. = WIN
+    &SYSSCP. = WIN
 %then
-	%do;
-		X "cd ""%substr(%sysget(SAS_EXECFILEPATH),1,%eval(%length(%sysget(SAS_EXECFILEPATH))-%length(%sysget(SAS_EXECFILENAME))))"""
-		;			
-		%include ".\&dataPrepFileName.";
-	%end;
+    %do;
+        X "cd ""%substr(%sysget(SAS_EXECFILEPATH),1,%eval(%length(%sysget(SAS_EXECFILEPATH))-%length(%sysget(SAS_EXECFILENAME))))"""
+        ;           
+        %include ".\&dataPrepFileName.";
+    %end;
 %else
-	%do;
-		%include "~/&sasUEFilePrefix./&dataPrepFileName.";
-	%end;
+    %do;
+        %include "~/&sasUEFilePrefix./&dataPrepFileName.";
+    %end;
 %mend;
 %setup
 
 
-
+*IL: don't wrap string literals;
 title1
-"Research Question: What are mean values for the variable of Time for the state 
-in the descending order?"
+"Research Question: What are mean values for the variable of Time for the state in the descending order?"
 ;
 title2
 "Rationale: This should help find the state with the slowest swim times so the 
@@ -83,7 +82,8 @@ proc means
         noprint
         data=SST091113_analytic_file
     ;
-    class State ;
+    *IL: be careful with spurious spaces;
+    class State;
     var Time;
     where length(State) = 2;
     output out=SST091113_analytic_file_temp;
