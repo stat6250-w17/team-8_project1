@@ -42,19 +42,19 @@ relative file import path to the current directory, if using Windows;
 
 
 title1 
-"research question: what is the Frequency age of the competitor for all three years?"
+"Research: question: what is the Frequency age of the competitor for all three years?"
 ;
 title2
-"Rational:I used above coding to calculating the weight of each age to calculationing the average age."
+"Rationale: I used above coding to calculating the weight of each age to calculationing the average age."
 ;
 footnote
-"this step  can show the frequency of each year, this may help me to see the distribution of ages, result shows that it has kind of normal distribution" 
+"This step  can show the frequency of each year, this may help me to see the distribution of ages, result shows that it has kind of normal distribution" 
 ;
 footnote2
-"however from this analysis I am calculating three years average I may need to calculate it for each year also to see if the average increased?"
+"However from this analysis I am calculating three years average I may need to calculate it for each year also to see if the average increased?"
 ;
 footnote3
-"future analysis can be compareing average of age for each year to see if the average increased?"
+"Future analysis can be compareing average of age for each year to see if the average increased?"
 ;
 *
 Methodology:Use proc freq to calculation the frequency of each year and from
@@ -72,16 +72,16 @@ title1
 "Research question:compare the gender ratio of swimmers in 2009 to overall three years?"
 ;
 title2
-"Rational:I wan to analysis the bias of this report on one gender."
+"Rationale: I wan to analysis the bias of this report on one gender."
 ;
 footnote1
 "This step showing the ratio of gender in 2009 and compare it in total three years, we can see the ratio has not a major changes"
 ;
 footnote2
-"if one gander has a significat differant so the result has bias and we can not valiate it for miniority gender"
+"If one gander has a significat differant so the result has bias and we can not valiate it for miniority gender"
 ;
 footnote3
-"future analysis can be calculating the gender ratio for each three years and see if gender ratio changes by changing the average age?"
+"Future analysis can be calculating the gender ratio for each three years and see if gender ratio changes by changing the average age?"
 ;
 *
 Methodology:Use proc freq. to have a percentage for all three years and 
@@ -103,16 +103,16 @@ title1
 "Research question:Is there any difference between Splits in their Min and Max?"
 ;
 title2
-"Rational:I wanted to see if the time changing from first slipt to the last one(get tired or if they speed up to win the game?)"
+"Rational: I wanted to see if the time changing from first slipt to the last one(get tired or if they speed up to win the game?)"
 ;
 footnote1
 "Min. and Max. of each split can show if it is increasing by time or if they kept they energy for last split"
 ;
 footnote2
-"this will clarify the hardest split for competitors, I can see the best Min. id for Split 1 and 10 but Max. increases"
+"This will clarify the hardest split for competitors, I can see the best Min. id for Split 1 and 10 but Max. increases"
 ;
 footnote3
-"future analysis can be comparing the shortest Split time of three years to see if has same incresing/decraesing of age average"
+"Future analysis can be comparing the shortest Split time of three years to see if has same incresing/decraesing of age average"
 ;
 *
 Methodology: Use proc mean to calculating the min and max. time for
