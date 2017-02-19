@@ -91,10 +91,7 @@ proc freq data=SST091113_analytic_file;
     tables Gender;   
 run;
 
-option firstobs=2 obs=200;
-proc print data=SST091113_analytic_file;
-run;
-proc freq data=SST091113_analytic_file;
+proc freq data=SST091113_analytic_file (firstobs=2 obs=200);
     table Gender;
 run;
 title;
